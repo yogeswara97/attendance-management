@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-satoshi font-normal text-base text-body bg-whiten relative z-1;
+  }
+}
+
+@layer components {
+  /* Sidebar Start */
+  .side-link {
+    @apply relative flex items-center gap-2.5 rounded-lg py-2 px-4 font-medium duration-300 ease-in-out;
+  }
+
+  .side-link:hover {
+    @apply bg-ash-1; 
+  }
+
+  .side-active {
+    @apply bg-green-4 text-white; 
+  }
+
+  .side-link.side-active:hover {
+    @apply bg-green-4 text-white; 
+  }
+
+  /* Sidebar End */
+
+  .custom-input {
+    @apply w-full rounded border-[1.5px] border-ash-3 bg-transparent py-3 px-5 text-black outline-none transition focus:border-green-6 active:border-green-6 disabled:cursor-default disabled:bg-whiter;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-green-4 py-2 px-5 text-white hover:bg-green-5 font-medium disabled:bg-ash-2 disabled:border-ash-3;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md bg-ash-4 py-2 px-5 text-white hover:bg-ash-5 font-medium;
+  }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .chat-height {
+    @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+  }
+  .inbox-height {
+    @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+  }
+}
+
+/* third-party libraries CSS */
